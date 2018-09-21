@@ -1,0 +1,5 @@
+import jwt
+
+encoded_jwt = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJkYXRhMSI6IkRhdGEgMSIsImRhdGEyIjoiRGF0YSAyIiwiZGF0YTMiOiJEYXRhIDMiLCJkYXRhNCI6IkRhdGEgNCIsImlhdCI6MTUzNzQ4NTA5OX0.TBJtCszUyeP7nB8-LKKVIejQ3GkKP7wNtebGojmKjwiZinNaoPaIHXkoyNLjyQc0a39N75HpdxGfKvudyAu0wA'.encode('ascii')
+print(encoded_jwt)
+print(jwt.decode(encoded_jwt, 'secret', algorithms='HS512'))
